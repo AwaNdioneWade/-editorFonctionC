@@ -10,17 +10,18 @@ function App() {
   const url = URL.createObjectURL(blob);
 
   return (
-    <div className="container-fluid p-5 bg-dark" style={{height: '100%'}} >
+    <div className="container-fluid p-5 bg-dark" style={{color: '#fff', textAlign: "center"}} >
+          <h2>Markdown Editor</h2>
       <div className='row'>
         <div className='col-12 col-md-8'>
-          <Textarea texte={texte} setTexte={setTexte} style={{backgroundColor: '#95a3b3', color: '#fff', border: 'none', width: '100%', height: '500px' }}  />
+          <Textarea texte={texte} setTexte={setTexte} style={{backgroundColor: '#95a3b3', color: '#fff', border: 'none', width: '100%', height: '500px', borderRaius: '15px', borderRadius: '15px' }}  />
         </div>
         <div className='col-12 col-md-3'>
-          <Texte texte={texte} style={{backgroundColor: '#fff', width: '100%', height: '250px' }} />
+          <Texte texte={texte} style={{backgroundColor: '#fff', width: '100%', height: '250px', borderRadius: '15px' }} />
         </div>
       </div>
 
-      <div className='row mt-5' style={{display:'flex', justifyContent: 'center'}}>
+      <div className='row mt-5' style={{display:'flex', justifyContent: 'center', alignItems: 'center' }}>
         <a href = {url} download = 'texte_telecharge.txt'>
         <button style={{ width:'140px', height: '60px', backgroundColor: '#084C61', color:'#fff', border:'none'}}>Download text</button>
         </a>
